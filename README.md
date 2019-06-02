@@ -1,4 +1,4 @@
-Airnemik = Airtable + NextJS + Formik
+# Airnemik = Airtable + NextJS + Formik
 
 1. Create a base at Airtable.com to retrieve your API KEY and Base ID
 2. Replace your API KEY and Base ID in index.js
