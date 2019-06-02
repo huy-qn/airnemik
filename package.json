@@ -2,7 +2,9 @@
   "name": "5c4b-landing-page",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "start": "next start",
+    "build": "next build"
   },
   "main": "index.js",
   "license": "MIT",
