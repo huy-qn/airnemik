@@ -1,5 +1,6 @@
 {
-  "name": "5c4b-landing-page",
+  "name": "airnemik",
+  "author": "huynguyen.me@gmail.com",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",

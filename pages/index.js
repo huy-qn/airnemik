@@ -7,8 +7,8 @@ import styled from "styled-components";
 import * as Yup from "yup";
 
 var Airtable = require("airtable");
-var base = new Airtable({ apiKey: "keyltww2PuILRs0l9" }).base(
-  "appSXfFw3xeIvJQcr"
+var base = new Airtable({ apiKey: "YOUR API KEY" }).base(
+  "YOUR AIRTABLE BASE ID"
 );
 
 const FormSchema = Yup.object().shape({
@@ -78,19 +78,11 @@ const IndexPage = props => {
         />
       </Head>
       <Wrapper>
-        <Box>
-          <Text as="h1" my="0">
-            5 Châu 4 Bể
-          </Text>
-        </Box>
         <Flex>
           <Box width={[1 / 2]} p={5}>
-            <Tagline as="h2">Cẩm nang sinh tồn cho người Việt xa xứ</Tagline>
+            <Tagline as="h2">Airnemik = Airtable + NextJS + Formik</Tagline>
             <Paragraph as="p">
-              Hầu như bất cứ người Việt Nam nào lần đầu tiên đặt chân lên một
-              đất nước mới, sinh sống, đều gặp phải các vấn đề cơ bản giống
-              nhau. Đi học, đi làm, thông dịch, nhà ở, đi lại, vân vân và vân
-              vân. 5 Châu 4 Bể được tạo ra để giúp giải quyết các vấn đề này!{" "}
+              Quickly build a landing-page with save data to Airtable
               <br />
             </Paragraph>
           </Box>
@@ -128,7 +120,7 @@ const IndexPage = props => {
                         type="number"
                         width={2 / 3}
                         p={3}
-                        placeholder="nhập ZIP code nơi bạn đang sống"
+                        placeholder="zip code"
                       />
                       <ErrorMessage name="zipCode">
                         {msg => <Text color="red">{msg}</Text>}
@@ -141,7 +133,7 @@ const IndexPage = props => {
                         name="email"
                         type="email"
                         p={3}
-                        placeholder="nhập email của bạn"
+                        placeholder="email"
                       />
                       <ErrorMessage name="email">
                         {msg => <Text color="red">{msg}</Text>}
@@ -154,12 +146,11 @@ const IndexPage = props => {
                       as="button"
                       type="submit"
                     >
-                      Tôi muốn tham Gia
+                      Submit
                     </Button>
                     {recordCreated === true ? (
                       <Text color="green">
-                        Cám ơn bạn đã đăng kí tham gia, 5c4b sẽ gửi thư mời tham
-                        gia cho bạn sớm thôi! Chờ nhé!
+                        Success
                       </Text>
                     ) : null}
                   </Form>
