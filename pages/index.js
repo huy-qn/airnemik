@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import { Flex, Box, Text } from "rebass";
 import { space, width } from "styled-system";
@@ -68,6 +68,7 @@ const Button = styled(Box)({
 });
 
 const IndexPage = props => {
+  const [recordCreated, setRecordCreationStatus] = useState(null);
   return (
     <>
       <Head>
@@ -112,7 +113,8 @@ const IndexPage = props => {
                         console.error(err);
                         return;
                       }
-                      console.log(record.getId());
+
+                      setRecordCreationStatus(true);
                     }
                   );
                 }}
@@ -154,6 +156,12 @@ const IndexPage = props => {
                     >
                       Tôi muốn tham Gia
                     </Button>
+                    {recordCreated === true ? (
+                      <Text color="green">
+                        Cám ơn bạn đã đăng kí tham gia, 5c4b sẽ gửi thư mời tham
+                        gia cho bạn sớm thôi! Chờ nhé!
+                      </Text>
+                    ) : null}
                   </Form>
                 )}
               </Formik>
